@@ -27,6 +27,7 @@ const quoteSlice = createSlice({
       .addCase(fetchRandomQuote.pending, (state) => {
         state.status = "loading";
       })
+
       .addCase(fetchRandomQuote.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.content = action.payload.content;
